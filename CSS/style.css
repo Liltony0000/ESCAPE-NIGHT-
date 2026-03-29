@@ -1,0 +1,99 @@
+:root {
+    --primary-blue: #00c6ff;
+    --dark-overlay: rgba(0, 0, 0, 0.6);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    /* BACKGROUND IMAGE: Featuring lady and pool style from flyer */
+    background: linear-gradient(var(--dark-overlay), var(--dark-overlay)), 
+                url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.booking-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-blue);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--primary-blue);
+}
+
+header h1 span {
+    color: white;
+    font-style: italic;
+}
+
+select {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #111;
+    color: white;
+    border: 1px solid #444;
+}
+
+.payment-box, .free-msg {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 198, 255, 0.1);
+    border-radius: 10px;
+    border: 1px dashed var(--primary-blue);
+}
+
+.copy-btn {
+    background: var(--primary-blue);
+    border: none;
+    padding: 12px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* POPUP MODAL */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #111;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-blue);
+    text-align: center;
+    width: 80%;
+}
